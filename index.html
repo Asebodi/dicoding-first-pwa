@@ -5,28 +5,18 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#EEF3F6" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rasakan kelaparan dimanapun dan kapanpun!"
+    />
     <link rel="icon" type="image/png" href="assets/icon192.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-      defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/css/materialize.min.css" />
+    <script src="/js/materialize.min.js" defer></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>Mangan</title>
   </head>
+
   <body class="blue-grey lighten-5">
     <nav class="blue-grey darken-4" role="navigation">
       <div class="nav-wrapper container">
@@ -42,7 +32,6 @@
 
     <div id="body-content"></div>
 
-    <script src="js/script.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
