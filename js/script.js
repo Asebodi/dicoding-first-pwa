@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // SIDEBAR NAVIGATION
+  // Query selector navigasi
   const elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);
   loadNav();
@@ -8,27 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
   if (page == "") page = "home";
   loadPage(page);
 
+  // Konten Navigasi
   function loadNav() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4) {
         if (this.status != 200) return;
 
-        // Muat daftar tautan menu
         document.querySelectorAll(".topnav, .sidenav").forEach((elm) => {
           elm.innerHTML = xhttp.responseText;
         });
 
-        // Daftarkan event listener untuk setiap tautan menu
         document
           .querySelectorAll(".sidenav a, .topnav a")
           .forEach(function (elm) {
             elm.addEventListener("click", (event) => {
-              // Tutup sidenav
               const sidenav = document.querySelector(".sidenav");
               M.Sidenav.getInstance(sidenav).close();
 
-              // Muat konten halaman yang dipanggil
               page = event.target.getAttribute("href").substr(1);
               loadPage(page);
             });
@@ -39,8 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     xhttp.send();
   }
 
-  // Load page content
-
+  // Konten Halaman
   function loadPage(page) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -51,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
         } else {
-          content.innerHTML = "<p>Ups.. halaman tidak dapat diakses.</p>";
+          content.innerHTML = "<p>Halaman tidak dapat diakses.</p>";
         }
       }
     };
