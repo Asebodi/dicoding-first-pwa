@@ -2,6 +2,11 @@ $theme-color: #eef3f6;
 $header-height: 400px;
 $custom-border-radius: 8px;
 
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("/assets//Poppins-Bold.ttf");
+}
+
 #body-content {
   padding-bottom: 4rem;
 }
@@ -10,6 +15,11 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
+
+  .sidenav-trigger {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .card {
@@ -19,6 +29,11 @@ nav {
     img {
       border-radius: $custom-border-radius $custom-border-radius 0 0;
     }
+  }
+
+  .halfway-fab {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -31,7 +46,7 @@ nav {
 }
 
 .poppins {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins Bold", sans-serif;
   font-weight: 700;
 }
 
@@ -134,6 +149,10 @@ nav {
     div {
       padding: 1rem;
       padding-bottom: 0;
+
+      img {
+        height: 21px;
+      }
     }
   }
 
@@ -148,7 +167,7 @@ nav {
 
     &:hover {
       border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.082);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
     }
   }
 }
