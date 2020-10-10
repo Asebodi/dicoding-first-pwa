@@ -2,11 +2,6 @@ $theme-color: #eef3f6;
 $header-height: 400px;
 $custom-border-radius: 8px;
 
-@font-face {
-  font-family: "Poppins Bold";
-  src: url("/assets//Poppins-Bold.ttf");
-}
-
 #body-content {
   padding-bottom: 4rem;
 }
@@ -45,9 +40,15 @@ nav {
   z-index: auto;
 }
 
-.poppins {
-  font-family: "Poppins Bold", sans-serif;
-  font-weight: 700;
+.brand-logo {
+  height: 100%;
+
+  .inner-nav-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .home-wrapper {
