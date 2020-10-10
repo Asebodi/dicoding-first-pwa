@@ -1,7 +1,9 @@
-const CACHE_NAME = "mangan-v1";
+const CACHE_NAME = "mangan-v2";
 
 const urlsToCache = [
   "/",
+  "/favicon.ico",
+  "/manifest.json",
   "/index.html",
   "/nav.html",
   "/pages/home.html",
@@ -11,6 +13,7 @@ const urlsToCache = [
   "/js/script.js",
   "/js/materialize.min.js",
   "/css/style.css",
+  "/css/style.css.map",
   "/css/materialize.min.css",
   "/assets/about.jpg",
   "/assets/header.jpg",
@@ -18,19 +21,23 @@ const urlsToCache = [
   "/assets/logo-black.png",
   "/assets/logo.png",
   "/assets/personal.jpg",
+  "/assets/icon32.png",
+  "/assets/icon96.png",
   "/assets/icon192.png",
   "/assets/icon512.png",
+  "/assets/icon192_maskable.png",
+  "/assets/icon512_maskable.png",
   "/assets/explore/1.jpg",
   "/assets/explore/2.jpg",
   "/assets/explore/3.jpg",
   "/assets/explore/4.jpg",
   "/assets/explore/5.jpg",
+  "/assets/svg/navbar.svg",
   "/assets/svg/burger.svg",
   "/assets/svg/favorite.svg",
   "/assets/svg/github.svg",
   "/assets/svg/instagram.svg",
   "/assets/svg/web.svg",
-  "/assets/Poppins-Bold.ttf",
 ];
 
 self.addEventListener("install", (event) => {
